@@ -1,0 +1,230 @@
+:root {
+  --main-color: #1f1f1f;
+}
+
+body {
+  color: var(--main-color);
+}
+
+.container {
+  max-width: calc(1510px + 18px);
+  font-family: Inter, sans-serif;
+}
+
+.navbar {
+  margin: 32px 0 126px;
+}
+
+.h1 {
+  font-size: 133px;
+  letter-spacing: 5px;
+}
+
+.h2 {
+  font-size: 58px;
+  font-weight: 600;
+}
+
+.main-description {
+  width: 82%;
+}
+
+.main-btn {
+  margin-top: 44px;
+  padding: 28px 78px;
+}
+
+.primary-text {
+  font-size: 22px;
+}
+
+.secondary-text {
+  font-size: 24px;
+  line-height: 165%;
+}
+
+.accent-text {
+  font-size: 70px;
+}
+
+.btn-text {
+  font-size: 20px;
+}
+
+.benefits__row {
+  gap: 130px;
+}
+
+.benefits__item {
+  padding-bottom: 62px;
+}
+
+.arrow-btn {
+  padding: 48px 64px;
+}
+
+.services {
+  margin: 173px 0 240px;
+}
+
+.services__title {
+  margin-bottom: 98px;
+}
+
+.services__title::before {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background: var(--main-color);
+  margin-right: 34px;
+}
+
+.services__card {
+  max-width: 466px;
+  border: none;
+}
+
+.services__card::before {
+  content: "";
+  width: 72px;
+  height: 70px;
+  margin-right: 35px;
+  padding-top: 16px;
+}
+
+.services__card:first-child::before {
+  content: url(./img/Lighting\ design\ icon.png);
+}
+
+.services__card:nth-child(2)::before {
+  content: url(./img/Interior\ design\ icon.png);
+}
+
+.services__card:last-child::before {
+  content: url(./img/Outdoor\ design\ icon.png);
+}
+
+.card-title {
+  font-size: 30px;
+}
+
+.services .card-title {
+  margin-bottom: 35px;
+}
+
+.spaces__container {
+  gap: 20px;
+}
+
+.spaces__description {
+  margin: 50px 0 86px;
+}
+
+.spaces__img {
+  max-width: 710px;
+  max-height: 710px;
+}
+
+.spaces__body {
+  max-width: 720px;
+}
+
+.accordion-header {
+  font-size: 24px;
+}
+
+.spaces__btn {
+  max-width: 275px;
+  height: 80px;
+}
+
+.accordion-item {
+  border: none;
+  border-bottom: var(--bs-accordion-border-width) solid #dee2e6;
+}
+
+.accordion-button::after {
+  background-image: url("./img/plus.svg");
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("./img/cross.svg");
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: white;
+  color: var(--main-color);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.steps__container {
+  margin: 240px auto 230px;
+  gap: 20px;
+}
+
+.steps__body {
+  gap: 48px;
+}
+.steps__cards {
+  gap: 20px;
+}
+
+.steps__card {
+  min-height: 206px;
+  padding: 16px 0 0 135px;
+  border: none;
+}
+
+@media (max-width: 1280px) {
+  .steps__card {
+    padding: 16px 0 0 95px;
+  }
+}
+
+.steps .card-title {
+  margin-bottom: 20px;
+}
+
+.steps__card::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 72px;
+  height: 72px;
+  left: 0px;
+  top: 0;
+  background-color: var(--main-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.steps__card::after{
+  position: absolute;
+  display: block;
+  content: "";
+  width: 1px;
+  height: 102px;
+  left: 0px;
+  top: 0;
+  transform: translate(36px, 104px);
+  background-color: var(--main-color);
+}
+
+.steps__card:first-child::before {
+  background-image: url(./img/Step1.svg);
+}
+.steps__card:nth-child(2)::before {
+  background-image: url(./img/Step2.svg);
+}
+.steps__card:last-child::before {
+  background-image: url(./img/Step3.svg);
+}
+
+ .steps__img {
+  max-height: 850px;
+ }
