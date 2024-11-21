@@ -6,6 +6,10 @@ body {
   color: var(--main-color);
 }
 
+p {
+  margin-bottom: 0;
+}
+
 .container {
   max-width: calc(1510px + 18px);
   font-family: Inter, sans-serif;
@@ -168,6 +172,7 @@ body {
 
 .steps__body {
   gap: 48px;
+  flex-basis: 45%;
 }
 .steps__cards {
   gap: 20px;
@@ -203,7 +208,7 @@ body {
   border-radius: 50%;
 }
 
-.steps__card::after{
+.steps__card::after {
   position: absolute;
   display: block;
   content: "";
@@ -225,6 +230,127 @@ body {
   background-image: url(./img/Step3.svg);
 }
 
- .steps__img {
+.steps__img {
   max-height: 850px;
- }
+  flex-basis: 48%;
+}
+
+.feedback__container {
+  height: 818px;
+  gap: 20px;
+}
+
+.feedback__img {
+  flex-basis: 46%;
+}
+
+.feedback__title {
+  flex-basis: 48%;
+  max-width: 760px;
+  margin-left: auto;
+}
+
+.feedback__body {
+ padding-top: 218px;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  left: 0;
+  right: 0;
+  gap: 73px;
+}
+
+.feedback__btns {
+  gap: 38px;
+}
+
+.btn-control {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 73px;
+  height: 73px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  z-index: 1;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+.btn-control:hover {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: 0.9;
+}
+
+.btn-control-prev-icon,
+.btn-control-next-icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% 100%;
+}
+
+.btn-control-prev-icon {
+  background-image: url("./img/prev.svg");
+}
+
+.btn-control-next-icon {
+  background-image: url("./img/next.svg");
+}
+
+.cards__wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 2) - 10px);
+  gap: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .cards__wrapper {
+    grid-auto-columns: 100%;
+  }
+}
+
+.cards__wrapper.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.feedback__card {
+  min-height: 600px;
+  max-height: 600px;
+  padding: 76px 56px 116px;
+background: var(--main-color);
+color: white;
+}
+
+.feedback__quote {
+  width: 50px;
+  height: 50px;
+  background: url(./img/quote.svg) no-repeat;
+}
+
+.feedback__card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__person {
+  gap: 24px;
+}
+
+.card__person-location {
+  font-size: 20px;
+  color: #929292;
+}
