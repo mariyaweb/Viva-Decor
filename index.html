@@ -49,19 +49,20 @@
   <main>
     <section class="main">
       <div class="container">
-        <div class="row pe-2">
-          <div class="col-8">
+        <div class="row pe-2 position-relative ">
+          <div class="col-8 main__text">
             <h1 class="h1 mb-5">Interior Design</h1>
-            <p class="fs-3 main-description">Step into a world where the art of Interior Design is meticulously crafted
+            <p class="fs-3 main__description secondary-text">Step into a world where the art of Interior Design is
+              meticulously crafted
               to bring together timeless elegance and cutting-edge
               modern Innovation, Allowing you to transform your living spaces into the epitome of luxury and
               sophistication</p>
           </div>
-          <div class="col-4 ps-0 overflow-hidden main-image"><img src="./img/main1.jpg" alt="interior"></div>
+          <div class="col-4 ps-0 overflow-hidden main__image "><img src="./img/main1.jpg" alt="interior"></div>
         </div>
-        <div class="row pe-2">
+        <div class="row pe-2 position-relative">
           <div class="col-6 d-flex flex-column align-items-start benefits__row">
-            <button class="btn btn-dark btn-text main-btn mt-5" type="submit">Start Project</button>
+            <button class="btn btn-dark btn-text main__btn mt-5" type="submit">Start Project</button>
             <div class="container benefits__items">
               <div class="row justify-content-between">
                 <div class="col">
@@ -80,8 +81,8 @@
             </div>
           </div>
           <div class="col-6 position-relative overflow-hidden">
-            <img src="./img/main2.jpg" alt="interior">
-            <button type="button" class="btn btn-secondary rounded-0 arrow-btn position-absolute bottom-0 end-0">
+            <img class="main__benefit-img" src="./img/main2.jpg" alt="interior">
+            <button type="button" class="btn btn-secondary rounded-0 main__arrow-btn position-absolute bottom-0 end-0">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="59" viewBox="0 0 24 59" fill="none">
                 <path
                   d="M13.5 2C13.5 1.17157 12.8284 0.5 12 0.5C11.1716 0.5 10.5 1.17157 10.5 2L13.5 2ZM10.9393 58.0607C11.5251 58.6464 12.4749 58.6464 13.0607 58.0607L22.6066 48.5147C23.1924 47.9289 23.1924 46.9792 22.6066 46.3934C22.0208 45.8076 21.0711 45.8076 20.4853 46.3934L12 54.8787L3.51472 46.3934C2.92893 45.8076 1.97918 45.8076 1.3934 46.3934C0.807609 46.9792 0.807609 47.9289 1.3934 48.5147L10.9393 58.0607ZM10.5 2L10.5 57L13.5 57L13.5 2L10.5 2Z"
@@ -97,21 +98,21 @@
       <div class="container">
         <h2 class="h2 services__title d-flex align-items-center">Our Services</h2>
         <div class="card-group justify-content-between">
-          <div class="card services__card flex-row">
+          <div class="card services__card flex-row position-relative">
             <div class="card-body">
               <h3 class="card-title fw-semibold">Lighting Design</h3>
               <p class="card-text primary-text">Achieve the perfect balance of ambient, task, and accent lighting for a
                 functional atmosphere.</p>
             </div>
           </div>
-          <div class="card services__card flex-row">
+          <div class="card services__card flex-row position-relative">
             <div class="card-body">
               <h3 class="card-title fw-semibold">Interior Design</h3>
               <p class="card-text primary-text">From concept to completion, we oversee every detail to bring your vision
                 to life efficiently</p>
             </div>
           </div>
-          <div class="card services__card flex-row">
+          <div class="card services__card flex-row position-relative">
             <div class="card-body">
               <h3 class="card-title fw-semibold">Outdoor Design</h3>
               <p class="card-text primary-text">Celebrate the changing seasons with our seasonal outdoor decor services
@@ -123,8 +124,8 @@
     </section>
     <section class="spaces">
       <div class="spaces__container container d-flex justify-content-between">
-        <div class="spaces__img w-50"><img src="./img/Learn more.jpg" class="img-fluid w-100" alt="spaces"></div>
-        <div class="spaces__body d-flex flex-column justify-content-between w-50">
+        <div class="spaces__img"><img src="./img/Learn more.jpg" class="img-fluid" alt="spaces"></div>
+        <div class="spaces__body d-flex flex-column justify-content-between">
           <h2 class="h2 spaces__title">Designing Your Dream With Brilliance</h2>
           <p class="spaces__description secondary-text fw-medium">Elevate your spaces with bespoke interior designs that
             reflect your
@@ -133,8 +134,9 @@
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button fw-semibold collapsed secondary-text" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                  aria-controls="collapseOne">
                   Living Room Interior Design
                 </button>
               </h2>
@@ -150,8 +152,9 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="accordion-button collapsed fw-semibold secondary-text" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                  aria-controls="collapseTwo">
                   Commercial Office Room Interior Design
                 </button>
               </h2>
@@ -176,7 +179,7 @@
       <div class="steps__container container d-flex justify-content-between">
         <div class="steps__body d-flex flex-column">
           <h2 class="h2 steps__title">Designing Your Dream in Three Simple Steps</h2>
-          <div class="d-flex flex-column flex-grow-1 justify-content-between steps__cards">
+          <div class="d-flex flex-lg-column steps__cards">
             <div class="card steps__card position-relative">
               <h5 class="card-title fw-bold">Start Project</h5>
               <p class="card-text secondary-text">Embark on your design adventure by initiating your project. Share your
@@ -199,7 +202,7 @@
     </section>
     <section class="feedback">
       <div class="container feedback__container d-flex justify-content-between position-relative">
-        <div class="feedback__img"><img src="./img/feedback-bg.png" class="img-fluid w-100" alt="feedback"></div>
+        <div class="feedback__img"><img src="./img/feedback-bg.png" alt="feedback"></div>
         <h2 class="h2 feedback__title">What Our Customers Say About Us</h2>
         <div class="feedback__body position-absolute d-flex align-items-end">
           <div class="feedback__btns d-flex">
@@ -220,7 +223,7 @@
                   <div class="card-text feedback__text secondary-text">Working with your design team was an absolute
                     pleasure. The attention to detail
                     and creativity exceeded my expectations. Thank you for making my home beautiful!</div>
-                  <div class="card__person d-flex">
+                  <div class="card__person d-flex align-items-center">
                     <div class="card__person-img"><img src="./img/avatar/avatar1.png" alt="avatar" class="card__avatar">
                     </div>
                     <div class="card__person-info">
@@ -236,7 +239,7 @@
                   <div class="card-text feedback__text secondary-text">Exceptional service! From the initial
                     consultation to the final reveal, your team demonstrated professionalism and a keen eye for design.
                     Highly recommend!</div>
-                  <div class="card__person d-flex">
+                  <div class="card__person d-flex align-items-center">
                     <div class="card__person-img"><img src="./img/avatar/avatar2.png" alt="avatar" class="card__avatar">
                     </div>
                     <div class="card__person-info">
@@ -249,10 +252,10 @@
               <div class="card feedback__card" draggable="false">
                 <div class="feedback__card-body">
                   <div class="feedback__quote fw-medium"></div>
-                  <div class="card-text feedback__text secondary-text">I recently worked with the design studio and I am
-                    so impressed with their exceptional service. From the initial consultation to the final reveal,
-                    their team showed a keen eye for design and a professionalism that I have not seen before.</div>
-                  <div class="card__person d-flex">
+                  <div class="card-text feedback__text secondary-text"> I am so impressed with exceptional service. From
+                    the initial consultation to the final reveal, their team showed a keen eye for design and a
+                    professionalism that I have not seen before.</div>
+                  <div class="card__person d-flex align-items-center">
                     <div class="card__person-img"><img src="./img/avatar/avatar3.png" alt="avatar" class="card__avatar">
                     </div>
                     <div class="card__person-info">
@@ -265,11 +268,11 @@
               <div class="card feedback__card" draggable="false">
                 <div class="feedback__card-body">
                   <div class="feedback__quote fw-medium"></div>
-                  <div class="card-text feedback__text secondary-text">I had the pleasure of collaborating with the
-                    design studio and I am blown away by their work. From the initial concept to the final
-                    implementation, their team demonstrated a deep understanding of design and a commitment to
+                  <div class="card-text feedback__text secondary-text">I am blown away by their work. From the initial
+                    concept to the final implementation, their team demonstrated a deep understanding of design and a
+                    commitment to
                     excellence.</div>
-                  <div class="card__person d-flex">
+                  <div class="card__person d-flex align-items-center">
                     <div class="card__person-img"><img src="./img/avatar/avatar4.png" alt="avatar" class="card__avatar">
                     </div>
                     <div class="card__person-info">
@@ -283,9 +286,9 @@
                 <div class="feedback__card-body">
                   <div class="feedback__quote fw-medium"></div>
                   <div class="card-text feedback__text secondary-text">I recently had the opportunity to work with the
-                    design studio and I am thoroughly impressed. From the initial consultation to the final reveal,
+                    design studio.From the initial consultation to the final reveal,
                     their team showed a keen eye for design and a professionalism that I have not seen before.</div>
-                  <div class="card__person d-flex">
+                  <div class="card__person d-flex align-items-center">
                     <div class="card__person-img"><img src="./img/avatar/avatar5.png" alt="avatar" class="card__avatar">
                     </div>
                     <div class="card__person-info">
@@ -298,11 +301,10 @@
               <div class="card feedback__card" draggable="false">
                 <div class="feedback__card-body">
                   <div class="feedback__quote fw-medium"></div>
-                  <div class="card-text feedback__text secondary-text">I had the pleasure of collaborating with the
-                    design studio and I am blown away by their work. From the initial concept to the final
+                  <div class="card-text feedback__text secondary-text">I am blown away by their work. From the initial concept to the final
                     implementation, their team demonstrated a deep understanding of design and a commitment to
                     excellence.</div>
-                  <div class="card__person d-flex">
+                  <div class="card__person d-flex align-items-center">
                     <div class="card__person-img"><img src="./img/avatar/avatar6.png" alt="avatar" class="card__avatar">
                     </div>
                     <div class="card__person-info">
@@ -343,10 +345,14 @@
           <div class="footer__description primary-text">VivaDecor your premier destination for luxury and modern
             interior design</div>
           <ul class="footer__social d-flex">
-            <li class="social__item"><a href="https://www.facebook.com/" target="_blank"><img src="./img/social/Facebook.svg" alt="facebook"></a></li>
-            <li class="social__item"><a href="https://twitter.com/" target="_blank"><img src="./img/social/twitter.svg" alt="twitter"></a></li>
-            <li class="social__item"><a href="https://www.instagram.com/" target="_blank"><img src="./img/social/Instagram.svg" alt="instagram"></a></li>
-            <li class="social__item"><a href="https://linkedin.com/" target="_blank"><img src="./img/social/Linkdin.svg" alt="linkedin"></a></li>
+            <li class="social__item"><a href="https://www.facebook.com/" target="_blank"><img
+                  src="./img/social/Facebook.svg" alt="facebook"></a></li>
+            <li class="social__item"><a href="https://twitter.com/" target="_blank"><img src="./img/social/twitter.svg"
+                  alt="twitter"></a></li>
+            <li class="social__item"><a href="https://www.instagram.com/" target="_blank"><img
+                  src="./img/social/Instagram.svg" alt="instagram"></a></li>
+            <li class="social__item"><a href="https://linkedin.com/" target="_blank"><img src="./img/social/Linkdin.svg"
+                  alt="linkedin"></a></li>
           </ul>
         </div>
         <div class="footer__item  footer__item-link d-flex flex-column justify-content-between">
@@ -370,8 +376,10 @@
         <div class="footer__item  footer__item-link d-flex flex-column">
           <h3 class="footer__title fw-semibold">Contacts</h3>
           <ul class="footer__link-list">
-            <li class="footer__link-item"><a class="footer__link secondary-text" href="mailto:info@vivadecor.com">info@vivadecor.com</a></li>
-            <li class="footer__link-item"><a class="footer__link" href="https://maps.app.goo.gl/1HhMyjeYitKg2rYA8" target="_blank">Design Avenue Cityville, CA 90210 United States</a></li>
+            <li class="footer__link-item"><a class="footer__link secondary-text"
+                href="mailto:info@vivadecor.com">info@vivadecor.com</a></li>
+            <li class="footer__link-item"><a class="footer__link" href="https://maps.app.goo.gl/1HhMyjeYitKg2rYA8"
+                target="_blank">Design Avenue Cityville, CA 90210 United States</a></li>
           </ul>
         </div>
 
