@@ -4,7 +4,6 @@ let firstCardWidth = document.querySelector('.feedback__card').offsetWidth + 20;
 
 window.addEventListener('resize', function () {
   firstCardWidth = document.querySelector('.feedback__card').offsetWidth;
-  console.log(document.querySelector('.card'));
   console.log(firstCardWidth);
 });
 
@@ -14,7 +13,6 @@ let isDragging = false,
 
 arrowsBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    console.log(firstCardWidth);
     carousel.scrollLeft += btn.id === 'left' ? -firstCardWidth : firstCardWidth;
   });
 
