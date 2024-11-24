@@ -2,8 +2,19 @@
   --main-color: #1f1f1f;
 }
 
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   color: var(--main-color);
+}
+
+main {
+  flex-grow: 1;
 }
 
 p {
@@ -40,9 +51,6 @@ li {
 .h2 {
   font-size: 58px;
   font-weight: 600;
-}
-
-.main__top-content {
 }
 
 @media (max-width: 660px) {
@@ -809,6 +817,13 @@ li {
   padding: 76px 56px 116px;
   background: var(--main-color);
   color: white;
+  border: none;
+}
+
+@media (max-width: 1200px) {
+  .feedback__card {
+    padding: 70px 50px 110px;
+  }
 }
 
 @media (max-width: 1080px) {
@@ -941,6 +956,7 @@ li {
   margin-top: -50px;
   background: var(--main-color);
   color: white;
+  z-index: -1;
 }
 
 @media (max-width: 1200px) {
@@ -1018,3 +1034,116 @@ li {
   color: white;
   text-decoration: none;
 }
+
+/* Animation */
+
+.delay-05 {
+  animation-delay: 0.2s;
+}
+
+.delay-1 {
+  animation-delay: 0.8s;
+}
+
+.delay-15 {
+  animation-delay: 1.2s;
+}
+
+.delay-2 {
+  animation-delay: 1.8s;
+}
+
+.element-animation {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.element-animation.element-show.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.element-animation.element-show.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.element-animation.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.element-animation.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
