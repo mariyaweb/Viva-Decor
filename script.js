@@ -101,4 +101,25 @@ document.querySelectorAll('.element-animation').forEach(section => {
 /* Btn listeners */
 document.querySelector('.main__arrow-btn').addEventListener('click', () => {
   window.location.href = '#services';
-})
+});
+
+const passwordShowBtns = document.querySelectorAll('.form__password');
+
+passwordShowBtns.forEach((btn) => {
+  const passwordNameField = btn.getAttribute('data-pas');
+  const idFieldName = `password-${passwordNameField}`;
+  const inputPasswordField = document.getElementById(idFieldName);
+  const passwordIcon = btn.querySelector('.password-icon');
+
+  btn.addEventListener('click', () => {
+    if (inputPasswordField.type === 'password') {
+      inputPasswordField.type = 'text';
+      passwordIcon.classList.remove('bi-eye');
+      passwordIcon.classList.add('bi-eye-slash');
+    } else {
+      inputPasswordField.type = 'password';
+      passwordIcon.classList.remove('bi-eye-slash');
+      passwordIcon.classList.add('bi-eye');
+    }
+  });
+});

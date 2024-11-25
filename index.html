@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,14 +19,15 @@
   <header class="header">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand me-0 element-animation fadeInLeft" href="#"><img src="./img/Logo.svg" class="d-block" alt="logo" width="177"
-            height="48"></a>
+        <a class="navbar-brand me-0 element-animation fadeInLeft" href="#"><img src="./img/Logo.svg" class="d-block"
+            alt="logo" width="177" height="48"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto justify-content-center align-items-center gap-lg-5 element-animation fadeInDown delay-05">
+          <ul
+            class="navbar-nav mx-auto justify-content-center align-items-center gap-lg-5 element-animation fadeInDown delay-05">
             <li class="nav-item">
               <a class="nav-link primary-text" aria-current="page" href="#">Home</a>
             </li>
@@ -40,7 +42,8 @@
             </li>
           </ul>
           <div class="d-flex justify-content-center element-animation fadeInRight delay-05">
-            <button class="btn btn-dark btn-text px-5 py-3 d-flex justify-content-center" type="submit">Sign Up</button>
+            <button class="btn btn-dark btn-text px-5 py-3 d-flex justify-content-center" data-bs-toggle="modal"
+              data-bs-target="#loginModal" type="button">Sign Up</button>
           </div>
         </div>
     </nav>
@@ -52,17 +55,20 @@
         <div class="row pe-2 position-relative ">
           <div class="col-8 main__text">
             <h1 class="h1 mb-5 element-animation fadeInLeft delay-05">Interior Design</h1>
-            <p class="fs-3 main__description secondary-text element-animation fadeInLeft delay-1">Step into a world where the art of Interior Design is
+            <p class="fs-3 main__description secondary-text element-animation fadeInLeft delay-1">Step into a world
+              where the art of Interior Design is
               meticulously crafted
               to bring together timeless elegance and cutting-edge
               modern Innovation, Allowing you to transform your living spaces into the epitome of luxury and
               sophistication</p>
           </div>
-          <div class="col-4 ps-0 overflow-hidden main__image element-animation fadeInRight delay-1"><img src="./img/main1.jpg" alt="interior"></div>
+          <div class="col-4 ps-0 overflow-hidden main__image element-animation fadeInRight delay-1"><img
+              src="./img/main1.jpg" alt="interior"></div>
         </div>
         <div class="row pe-2 position-relative">
           <div class="col-6 d-flex flex-column align-items-start benefits__row">
-            <button class="btn btn-dark btn-text main__btn mt-5 element-animation fadeInLeft delay-1" type="submit">Start Project</button>
+            <button class="btn btn-dark btn-text main__btn mt-5 element-animation fadeInLeft delay-1"
+              type="submit">Start Project</button>
             <div class="container benefits__items element-animation fadeInLeft delay-1">
               <div class="row justify-content-between">
                 <div class="col">
@@ -124,7 +130,8 @@
     </section>
     <section class="spaces">
       <div class="spaces__container container d-flex justify-content-between">
-        <div class="spaces__img element-animation fadeInLeft delay-05"><img src="./img/Learn more.jpg" class="img-fluid" alt="spaces"></div>
+        <div class="spaces__img element-animation fadeInLeft delay-05"><img src="./img/Learn more.jpg" class="img-fluid"
+            alt="spaces"></div>
         <div class="spaces__body d-flex flex-column justify-content-between element-animation fadeInRight delay-05">
           <h2 class="h2 spaces__title">Designing Your Dream With Brilliance</h2>
           <p class="spaces__description secondary-text fw-medium">Elevate your spaces with bespoke interior designs that
@@ -178,7 +185,8 @@
     <section class="steps">
       <div class="steps__container container d-flex justify-content-between">
         <div class="steps__body d-flex flex-column">
-          <h2 class="h2 steps__title element-animation fadeInLeft delay-05">Designing Your Dream in Three Simple Steps</h2>
+          <h2 class="h2 steps__title element-animation fadeInLeft delay-05">Designing Your Dream in Three Simple Steps
+          </h2>
           <div class="d-flex flex-lg-column steps__cards">
             <div class="card steps__card position-relative element-animation fadeInLeft delay-1">
               <h5 class="card-title fw-bold">Start Project</h5>
@@ -197,12 +205,14 @@
             </div>
           </div>
         </div>
-        <div class="steps__img element-animation fadeInRight delay-15"><img src="./img/steps.png" class="img-fluid w-100" alt="spaces"></div>
+        <div class="steps__img element-animation fadeInRight delay-15"><img src="./img/steps.png"
+            class="img-fluid w-100" alt="spaces"></div>
       </div>
     </section>
     <section class="feedback" id="feedback">
       <div class="container feedback__container d-flex justify-content-between position-relative">
-        <div class="feedback__img element-animation fadeInLeft delay-05"><img src="./img/feedback-bg.png" alt="feedback"></div>
+        <div class="feedback__img element-animation fadeInLeft delay-05"><img src="./img/feedback-bg.png"
+            alt="feedback"></div>
         <h2 class="h2 feedback__title element-animation fadeInRight delay-05">What Our Customers Say About Us</h2>
         <div class="feedback__body position-absolute d-flex align-items-end">
           <div class="feedback__btns d-flex element-animation fadeInLeft delay-15">
@@ -301,7 +311,8 @@
               <div class="card feedback__card" draggable="false">
                 <div class="feedback__card-body">
                   <div class="feedback__quote fw-medium"></div>
-                  <div class="card-text feedback__text secondary-text">I am blown away by their work. From the initial concept to the final
+                  <div class="card-text feedback__text secondary-text">I am blown away by their work. From the initial
+                    concept to the final
                     implementation, their team demonstrated a deep understanding of design and a commitment to
                     excellence.</div>
                   <div class="card__person d-flex align-items-center">
@@ -322,13 +333,14 @@
     </section>
     <section class="subscribe">
       <div class="container d-flex flex-column align-items-center subscribe__container">
-        <h2 class="h2 text-center subscribe__title element-animation fadeInUp delay-05">Subscribe to Our Newsletter for Design Insights</h2>
-        <p class="subscribe__text text-center secondary-text element-animation fadeInUp delay-1">Be the first to discover trends, inspirations, and special
+        <h2 class="h2 text-center subscribe__title element-animation fadeInUp delay-05">Subscribe to Our Newsletter for
+          Design Insights</h2>
+        <p class="subscribe__text text-center secondary-text element-animation fadeInUp delay-1">Be the first to
+          discover trends, inspirations, and special
           offers as we bring the world of design directly to your inbox</p>
         <form class="subscribe__form d-flex align-items-center needs-validation element-animation fadeInUp delay-2">
           <div class="input-group has-validation">
-            <input type="email" class="form-control" id="email" placeholder="Enter your email address"
-              aria-describedby="emailHelp" required>
+            <input type="email" class="form-control" id="email-subscribe" placeholder="Enter your email address" required>
             <div class="invalid-feedback">
               Please choose a correct email.
             </div>
@@ -387,6 +399,174 @@
 
     </div>
   </footer>
+
+  <div class="modal modal__login" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center px-5">
+          <h1>Login</h1>
+          <p class="text-danger mb-5">This feature is currently under development and will be available soon...</p>
+          <form class="modal__form d-flex flex-column gap-4 needs-validation">
+            <div class="input-group has-validation border rounded-1">
+              <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                </svg></span>
+              <input type="email" class="form-control" id="email-login" placeholder="Enter your email address" required>
+              <div class="invalid-feedback">
+                Please choose a correct email.
+              </div>
+            </div>
+            <div class="input-group has-validation border rounded-1">
+              <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                  <path
+                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />
+                </svg></span>
+              <input type="password" id="password-login" class="form-control" aria-invalid="true"
+                placeholder="Enter your password" pattern="^(?=.*[A-Z])[a-zA-Z]{8,}$"
+                title="The password must contain at least 8 letters, one of which is capitalized">
+              <span class="input-group-text form__password" data-pas="login"><i class="bi bi-eye password-icon"></i></span>
+              <div class="invalid-feedback">
+                The password must contain at least 8 letters, one of which is capitalized
+              </div>
+            </div>
+            <div class="input-group d-flex justify-content-between">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">
+                  Remember me
+                </label>
+              </div>
+              <div class="form__forgot-pass">
+                <a href="" data-bs-target="#resetPasswordModal" data-bs-toggle="modal">Forgot password?</a>
+              </div>
+
+            </div>
+            <button type="submit" class="btn btn-dark btn-text">Login</button>
+            <hr class="modal__dividing-line position-relative">
+          </form>
+          <ul class="modal__social d-flex justify-content-center">
+            <li class="social__item"><a href="https://www.facebook.com/" target="_blank"><img
+                  src="./img/social/Facebook-color.svg" alt="facebook"></a></li>
+            <li class="social__item"><a href="https://accounts.google.com/" target="_blank"><img
+                  src="./img/social/Google-color.svg" alt="instagram"></a></li>
+
+            <li class="social__item"><a href="https://twitter.com/" target="_blank"><img src="./img/social/Twitter-color.svg"
+                  alt="twitter"></a></li>
+
+          </ul>
+          <div class="form__switch-login"> Don't have an account?
+            <a href="" data-bs-target="#registrationModal" data-bs-toggle="modal">Register here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal__login" id="registrationModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center px-5">
+          <h1>Create an account</h1>
+          <p class="text-danger mb-5">This feature is currently under development and will be available soon...</p>
+          <form class="modal__form d-flex flex-column gap-4 needs-validation">
+            <div class="input-group has-validation border rounded-1">
+              <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+              </svg></span>
+              <input type="text" class="form-control" id="user-registration" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group has-validation border rounded-1">
+              <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                </svg></span>
+              <input type="email" class="form-control" id="email-registration" placeholder="Enter your email address" required>
+              <div class="invalid-feedback">
+                Please choose a correct email.
+              </div>
+            </div>
+            <div class="input-group has-validation border rounded-1">
+              <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+                  <path
+                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1" />
+                </svg></span>
+              <input type="password" id="password-registration" class="form-control password" aria-invalid="true"
+                placeholder="Enter your password" pattern="^(?=.*[A-Z])[a-zA-Z]{8,}$"
+                title="The password must contain at least 8 letters, one of which is capitalized">
+              <span class="input-group-text form__password" data-pas="registration"><i  class="bi bi-eye password-icon"></i></span>
+            </div>
+            <div class="input-group d-flex justify-content-between">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rememberMe-registration">
+                <label class="form-check-label" for="rememberMe-registration">
+                  Remember me
+                </label>
+              </div>
+              <div class="form__forgot-pass">
+                <a href="" data-bs-target="#resetPasswordModal" data-bs-toggle="modal">Forgot password?</a>
+              </div>
+
+            </div>
+            <button type="submit" class="btn btn-dark btn-text">Register</button>
+            <hr class="modal__dividing-line position-relative">
+          </form>
+          <ul class="modal__social d-flex justify-content-center">
+            <li class="social__item"><a href="https://www.facebook.com/" target="_blank"><img
+                  src="./img/social/Facebook-color.svg" alt="facebook"></a></li>
+            <li class="social__item"><a href="https://accounts.google.com/" target="_blank"><img
+                  src="./img/social/Google-color.svg" alt="instagram"></a></li>
+
+            <li class="social__item"><a href="https://twitter.com/" target="_blank"><img src="./img/social/Twitter-color.svg"
+                  alt="twitter"></a></li>
+
+          </ul>
+          <div class="form__switch-login"> Already have an account?
+            <a href="" data-bs-target="#loginModal" data-bs-toggle="modal">Login here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal__login" id="resetPasswordModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center px-5 pb-5">
+          <h1>Login</h1>
+          <p class="text-danger mb-5">This feature is currently under development and will be available soon...</p>
+          <form class="modal__form d-flex flex-column gap-4 needs-validation">
+            <div class="input-group has-validation border rounded-1">
+              <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                </svg></span>
+              <input type="email" class="form-control" id="email-reset-password" placeholder="Enter your email address" required>
+              <div class="invalid-feedback">
+                Please choose a correct email.
+              </div>
+            </div>
+            <div class="input-group has-validation justify-content-around">
+              <button type="submit" class="btn btn-dark btn-text">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
