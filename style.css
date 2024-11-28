@@ -1155,10 +1155,6 @@ hr {
   border: none;
 }
 
-/* .modal__form {
-  padding-bottom: 64px;
-} */
-
 .modal__dividing-line {
   height: 24px;
   overflow: visible;
@@ -1187,4 +1183,91 @@ hr {
 .form__switch-login {
   padding-top: 2rem;
   padding-bottom: 64px;
+}
+
+.application__item {
+  width: 500px;
+}
+
+.input__select {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  width: 70%;
+  z-index: -1;
+}
+
+.input__select.show {
+  opacity: 1;
+  bottom: 0;
+  z-index: 5;
+  pointer-events: initial;
+}
+
+.application__range {
+  height: 48px;
+}
+.range__value {
+  height: 100%;
+}
+
+
+
+.range__field {
+  bottom: 0;
+}
+
+.range__min,
+.range__max {
+  bottom: -20px;
+}
+
+.range__max {
+  right: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.range__value-number {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 20px;
+  width: 40px;
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  transform: translateX(-14px);
+  left: 9.09%;
+}
+
+.range__value-number:focus {
+  border: 1px solid blue;
+}
+
+.form__range {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  width: 100%;
+  background: #e9ecef;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+.form__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 14px;
+  width: 14px;
+  background: rgb(54, 54, 54);
+  border-radius: 50%;
+  cursor: pointer;
 }

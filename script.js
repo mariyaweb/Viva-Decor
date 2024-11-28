@@ -103,6 +103,9 @@ document.querySelector('.main__arrow-btn').addEventListener('click', () => {
   window.location.href = '#services';
 });
 
+
+/* Show/hide password */
+
 const passwordShowBtns = document.querySelectorAll('.form__password');
 
 passwordShowBtns.forEach((btn) => {
@@ -123,3 +126,60 @@ passwordShowBtns.forEach((btn) => {
     }
   });
 });
+
+/* Enter other value into  select menus*/
+
+const selectForm = document.querySelector('.form-select');
+const selectInput = document.querySelector('.input__select');
+selectForm.addEventListener('change', function() {
+  console.log('change');
+  console.log(this.value);
+  if (this.value === "Other") {
+selectInput.classList.add('show');
+  } else {
+    selectInput.classList.remove('show');
+  }
+});
+
+/* Range change */
+
+const rangeTextInput = document.querySelector('.range__value-number')
+const rangeInput = document.querySelector('.form__range');
+const minRangeValue = 5;
+const maxRangeValue = 500;
+
+rangeInput.addEventListener('input', (e) => setRangePosition(e.target.value));
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && event.target.type === "number") {
+    e.preventDefault();
+    let value = setCorrectValue(e.target.value);
+    rangeInput.value = value;
+    setRangePosition(value);
+  }
+});
+
+rangeTextInput.addEventListener('change',(e) => {
+  console.log();
+  e.preventDefault();
+  let value = setCorrectValue(e.target.value);
+  rangeInput.value = value;
+  setRangePosition(value);
+})
+
+function setRangePosition(value){
+  console.log(value);
+  const currValue = value;
+  const offset = 100 * (currValue - minRangeValue)/(maxRangeValue - minRangeValue);
+  rangeTextInput.value = value;
+  rangeTextInput.style.left = offset + '%';
+}
+
+function setCorrectValue(value) {
+  if (value < minRangeValue) {
+    value = minRangeValue;
+  } else if (value > maxRangeValue) {
+    value = maxRangeValue;
+  }
+  return value;
+}
