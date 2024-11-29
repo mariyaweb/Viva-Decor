@@ -1186,7 +1186,16 @@ hr {
 }
 
 .application__item {
-  width: 500px;
+  width: 100%;
+}
+
+.application__form {
+  & h2 {
+    max-width: 360px;
+  }
+  & p {
+    max-width: 300px;
+  }
 }
 
 .input__select {
@@ -1210,8 +1219,6 @@ hr {
 .range__value {
   height: 100%;
 }
-
-
 
 .range__field {
   bottom: 0;

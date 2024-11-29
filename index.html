@@ -69,7 +69,7 @@
         <div class="row pe-2 position-relative">
           <div class="col-6 d-flex flex-column align-items-start benefits__row">
             <button class="btn btn-dark btn-text main__btn mt-5 element-animation fadeInLeft delay-1"
-              type="submit">Start Project</button>
+            data-bs-toggle="modal" data-bs-target="#applicationModal">Start Project</button>
             <div class="container benefits__items element-animation fadeInLeft delay-1">
               <div class="row justify-content-between">
                 <div class="col">
@@ -353,55 +353,92 @@
     </section>
   </main>
 
-
-  <footer class="footer z-behind-10 element-animation fadeInUp delay-05" id="footer">
-    <div class="container footer__container">
-      <div class="footer__item d-flex flex-column justify-content-between">
-        <div class="footer__logo"><a href="#"><img src="./img/LogoLite.svg" class="d-block" alt="logo" width="177"
-              height="48"></a></div>
-        <div class="footer__description primary-text">VivaDecor your premier destination for luxury and modern
-          interior design</div>
-        <ul class="footer__social d-flex">
-          <li class="social__item"><a href="https://www.facebook.com/" target="_blank"><img
-                src="./img/social/Facebook.svg" alt="facebook"></a></li>
-          <li class="social__item"><a href="https://twitter.com/" target="_blank"><img src="./img/social/twitter.svg"
-                alt="twitter"></a></li>
-          <li class="social__item"><a href="https://www.instagram.com/" target="_blank"><img
-                src="./img/social/Instagram.svg" alt="instagram"></a></li>
-          <li class="social__item"><a href="https://linkedin.com/" target="_blank"><img src="./img/social/Linkdin.svg"
-                alt="linkedin"></a></li>
-        </ul>
+  <div class="modal modal__application" id="applicationModal">
+    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content application">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="footer__item  footer__item-link d-flex flex-column justify-content-between">
-        <h3 class="footer__title fw-semibold">Services</h3>
-        <ul class="footer__link-list">
-          <li class="footer__link-item"><a class="footer__link" href="">Interior design</a></li>
-          <li class="footer__link-item"><a class="footer__link" href="">Outdoor design</a></li>
-          <li class="footer__link-item"><a class="footer__link" href="">Lightning design</a></li>
-          <li class="footer__link-item"><a class="footer__link" href="">Office design</a></li>
-        </ul>
-      </div>
-      <div class="footer__item  footer__item-link d-flex flex-column justify-content-between">
-        <h3 class="footer__title fw-semibold">Info</h3>
-        <ul class="footer__link-list">
-          <li class="footer__link-item"><a class="footer__link" href="#feedback">Reviews</a></li>
-          <li class="footer__link-item"><a class="footer__link" href="">Careers</a></li>
-          <li class="footer__link-item"><a class="footer__link" href="">Pricing</a></li>
-          <li class="footer__link-item"><a class="footer__link" href="">Press inquires</a></li>
-        </ul>
-      </div>
-      <div class="footer__item  footer__item-link d-flex flex-column">
-        <h3 class="footer__title fw-semibold">Contacts</h3>
-        <ul class="footer__link-list">
-          <li class="footer__link-item"><a class="footer__link secondary-text"
-              href="mailto:info@vivadecor.com">info@vivadecor.com</a></li>
-          <li class="footer__link-item"><a class="footer__link" href="https://maps.app.goo.gl/1HhMyjeYitKg2rYA8"
-              target="_blank">Design Avenue Cityville, CA 90210 United States</a></li>
-        </ul>
-      </div>
-
+      <div class="modal-body px-4 pb-4 px-sm-5 pb-sm-5">
+      <form class="application__form d-flex flex-column align-items-center">
+        <h2 class="mb-3 text-center">Create your perfect interior with us</h2>
+        <p class="mb-5 text-center">Send us your application and we will contact you soon</p>
+  
+        <div class="mb-4 application__item position-relative">
+          <label for="designType" class="form-label fw-semibold">You need a design</label>
+          <select class="form-select" id="designType" aria-label="Design type">
+            <option value="House">House</option>
+            <option value="Office">Office</option>
+            <option value="Restaurant">Restaurant</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Store">Store</option>
+            <option value="Other">Other...</option>
+          </select>
+          <input type="text" class="form-control input__select border-bottom position-absolute" id="designTypeOther"
+            placeholder="Enter other design type">
+        </div>
+  
+        <div class="mb-4 application__item">
+          <label for="roomsCount" class="form-label fw-semibold">How many rooms are in your premises?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="roomsCount" id="roomsCount1" value="1-10">
+            <label class="form-check-label" for="roomsCount1">1-10</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="roomsCount" id="roomsCount2" value="10-20">
+            <label class="form-check-label" for="roomsCount2">10-20</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="roomsCount" id="roomsCount3" value="20-50">
+            <label class="form-check-label" for="roomsCount3">20-50</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="roomsCount" id="roomsCount4" value="50">
+            <label class="form-check-label" for="roomsCount4">50+</label>
+          </div>
+        </div>
+  
+        <div class="mb-4 application__item">
+          <label for="floorArea" class="form-label fw-semibold">What is your total floor area?</label>
+          <div class="application__range range d-flex flex-column">
+            <div class="range__value position-relative w-100"> <input type="number"
+                class="form-control range__value-number" id="floorAreaValue" value="50"></div>
+  
+            <div class="range__field position-relative">
+              <div class="range__min position-absolute">5</div>
+              <input type="range" class="form__range mt-4" id="floorArea" min="5" max="500" value="50">
+              <div class="range__max position-absolute">500+</div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="mb-4 mt-4 application__item">
+          <label for="style" class="form-label fw-semibold">In what style do you want the interior?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="style" id="styleLuxury" value="Luxury">
+            <label class="form-check-label" for="styleLuxury">Luxury</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="style" id="styleMinimalism" value="Minimalism">
+            <label class="form-check-label" for="styleMinimalism">Minimalism</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="style" id="styleArtDeco" value="Art Deco">
+            <label class="form-check-label" for="styleArtDeco">Art Deco</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="style" id="styleScandinavian" value="Scandinavian">
+            <label class="form-check-label" for="styleScandinavian">Scandinavian</label>
+          </div>
+        </div>
+       
+  
+        <button type="submit" class="btn btn-primary">Send application</button>
+      </form>
     </div>
-  </footer>
+    </div>
+    </div>
+  </div>
 
   <div class="modal modal__login" id="loginModal">
     <div class="modal-dialog modal-dialog-centered">
@@ -577,9 +614,13 @@
     </div>
   </div>
 
-  <div class="modal modal__application" id="applicationModal">
+    <div class="modal modal__application" id="applicationModal">
     <div class="modal-dialog modal-dialog-centered">
-    <div class="application">
+    <div class="modal-content application">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center px-5 pb-5">
       <form class="application__form d-flex flex-column align-items-center">
         <h2 class="mb-3">Create your perfect interior with us!</h2>
         <p class="mb-5">Send us your application and we will contact you soon</p>
@@ -651,13 +692,63 @@
             <label class="form-check-label" for="styleScandinavian">Scandinavian</label>
           </div>
         </div>
-        </div>
+       
   
         <button type="submit" class="btn btn-primary">Send application</button>
       </form>
     </div>
+    </div>
+    </div>
   </div>
 
+  <footer class="footer z-behind-10 element-animation fadeInUp delay-05" id="footer">
+    <div class="container footer__container">
+      <div class="footer__item d-flex flex-column justify-content-between">
+        <div class="footer__logo"><a href="#"><img src="./img/LogoLite.svg" class="d-block" alt="logo" width="177"
+              height="48"></a></div>
+        <div class="footer__description primary-text">VivaDecor your premier destination for luxury and modern
+          interior design</div>
+        <ul class="footer__social d-flex">
+          <li class="social__item"><a href="https://www.facebook.com/" target="_blank"><img
+                src="./img/social/Facebook.svg" alt="facebook"></a></li>
+          <li class="social__item"><a href="https://twitter.com/" target="_blank"><img src="./img/social/twitter.svg"
+                alt="twitter"></a></li>
+          <li class="social__item"><a href="https://www.instagram.com/" target="_blank"><img
+                src="./img/social/Instagram.svg" alt="instagram"></a></li>
+          <li class="social__item"><a href="https://linkedin.com/" target="_blank"><img src="./img/social/Linkdin.svg"
+                alt="linkedin"></a></li>
+        </ul>
+      </div>
+      <div class="footer__item  footer__item-link d-flex flex-column justify-content-between">
+        <h3 class="footer__title fw-semibold">Services</h3>
+        <ul class="footer__link-list">
+          <li class="footer__link-item"><a class="footer__link" href="">Interior design</a></li>
+          <li class="footer__link-item"><a class="footer__link" href="">Outdoor design</a></li>
+          <li class="footer__link-item"><a class="footer__link" href="">Lightning design</a></li>
+          <li class="footer__link-item"><a class="footer__link" href="">Office design</a></li>
+        </ul>
+      </div>
+      <div class="footer__item  footer__item-link d-flex flex-column justify-content-between">
+        <h3 class="footer__title fw-semibold">Info</h3>
+        <ul class="footer__link-list">
+          <li class="footer__link-item"><a class="footer__link" href="#feedback">Reviews</a></li>
+          <li class="footer__link-item"><a class="footer__link" href="">Careers</a></li>
+          <li class="footer__link-item"><a class="footer__link" href="">Pricing</a></li>
+          <li class="footer__link-item"><a class="footer__link" href="">Press inquires</a></li>
+        </ul>
+      </div>
+      <div class="footer__item  footer__item-link d-flex flex-column">
+        <h3 class="footer__title fw-semibold">Contacts</h3>
+        <ul class="footer__link-list">
+          <li class="footer__link-item"><a class="footer__link secondary-text"
+              href="mailto:info@vivadecor.com">info@vivadecor.com</a></li>
+          <li class="footer__link-item"><a class="footer__link" href="https://maps.app.goo.gl/1HhMyjeYitKg2rYA8"
+              target="_blank">Design Avenue Cityville, CA 90210 United States</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
