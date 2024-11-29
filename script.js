@@ -47,11 +47,11 @@ document.querySelector('.cards__wrapper').addEventListener('touchstart', (event)
   document.addEventListener('touchend', (event) => {
     const endX = event.changedTouches[0].clientX;
     const deltaX = endX - startX;
-      if (deltaX > 0) {
-        carousel.scrollBy(-firstCardWidth, 0); 
-      } else {
-        carousel.scrollBy(firstCardWidth, 0);
-      }
+    if (deltaX > 0) {
+      carousel.scrollBy(-firstCardWidth, 0);
+    } else {
+      carousel.scrollBy(firstCardWidth, 0);
+    }
   });
 });
 
@@ -131,11 +131,9 @@ passwordShowBtns.forEach((btn) => {
 
 const selectForm = document.querySelector('.form-select');
 const selectInput = document.querySelector('.input__select');
-selectForm.addEventListener('change', function() {
-  console.log('change');
-  console.log(this.value);
+selectForm.addEventListener('change', function () {
   if (this.value === "Other") {
-selectInput.classList.add('show');
+    selectInput.classList.add('show');
   } else {
     selectInput.classList.remove('show');
   }
@@ -159,18 +157,16 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-rangeTextInput.addEventListener('change',(e) => {
-  console.log();
+rangeTextInput.addEventListener('change', (e) => {
   e.preventDefault();
   let value = setCorrectValue(e.target.value);
   rangeInput.value = value;
   setRangePosition(value);
 })
 
-function setRangePosition(value){
-  console.log(value);
+function setRangePosition(value) {
   const currValue = value;
-  const offset = 100 * (currValue - minRangeValue)/(maxRangeValue - minRangeValue);
+  const offset = 100 * (currValue - minRangeValue) / (maxRangeValue - minRangeValue);
   rangeTextInput.value = value;
   rangeTextInput.style.left = offset + '%';
 }
@@ -183,3 +179,55 @@ function setCorrectValue(value) {
   }
   return value;
 }
+
+/* Phone mask */
+const phoneInput = document.querySelector('.application__phone');
+const phoneMasks = intlTelInput(phoneInput, {
+  loadUtilsOnInit: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/js/utils.js",
+  initialCountry: 'auto',
+  geoIpLookup: function (callback) {
+    fetch('https://ipapi.co/json/', {
+      mode: 'no-cors'
+    })
+      .then(response => response.json())
+      .then(data => {
+        const countryCode = data.country_code;
+        callback(countryCode);
+      })
+      .catch(error => {
+        callback("us");
+        console.error(error);
+      });
+  },
+  nationalMode: true,
+  numberType: 'MOBILE',
+  separateDialCode: true,
+});
+
+
+phoneInput.addEventListener('input', () => phoneValidation());
+
+function phoneValidation() {
+  const isValid = phoneMasks.isValidNumber();
+  if (isValid) {
+    phoneInput.classList.add('valid');
+    phoneInput.classList.remove('is-invalid');
+  } else {
+    phoneInput.classList.remove('valid');
+    phoneInput.classList.add('is-invalid');
+  }
+  return isValid;
+}
+
+const sendApplicationBtn = document.querySelector('.application__send');
+const applicationForm = document.querySelector('.application__form');
+applicationForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (applicationForm.checkValidity()) {
+    if(!phoneValidation()) {
+      phoneInput.classList.add('has-error');
+    } else {
+      console.log('данные можно отправлять на сервер');
+    }
+  }
+})

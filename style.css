@@ -926,7 +926,7 @@ hr {
   height: 24px;
 }
 
-.form-control {
+.subscribe__form .form-control {
   border-color: transparent;
 }
 
@@ -1277,4 +1277,24 @@ input[type="number"]::-webkit-outer-spin-button {
   background: rgb(54, 54, 54);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.modal__application .form-control {
+  border-color: var(--bs-border-color);
+}
+
+.modal__application .form-control:focus {
+  border-color: var(--main-color);
+}
+
+.modal__application .application__phone {
+  width: 100%;
+}
+
+.iti {
+  width: 100%;
+}
+
+.application__phone.is-invalid {
+  border-color: red;
 }
