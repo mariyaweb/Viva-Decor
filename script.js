@@ -219,7 +219,7 @@ function phoneValidation() {
   return isValid;
 }
 
-const sendApplicationBtn = document.querySelector('.application__send');
+
 const applicationForm = document.querySelector('.application__form');
 applicationForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -227,7 +227,8 @@ applicationForm.addEventListener('submit', (e) => {
     if(!phoneValidation()) {
       phoneInput.classList.add('has-error');
     } else {
-      console.log('данные можно отправлять на сервер');
+      document.querySelector('.application__switch-modal').click();
     }
   }
 })
+
