@@ -181,31 +181,48 @@ function setCorrectValue(value) {
 }
 
 /* Phone mask */
-const phoneInput = document.querySelector('.application__phone');
-const phoneMasks = intlTelInput(phoneInput, {
-  loadUtilsOnInit: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/js/utils.js",
-  initialCountry: 'auto',
-  geoIpLookup: function (callback) {
-    fetch('https://ipapi.co/json/', {
-      mode: 'no-cors'
-    })
-      .then(response => response.json())
-      .then(data => {
-        const countryCode = data.country_code;
-        callback(countryCode);
-      })
-      .catch(error => {
-        callback("us");
-        console.error(error);
-      });
-  },
-  nationalMode: true,
-  numberType: 'MOBILE',
-  separateDialCode: true,
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof intlTelInput === "undefined") {
+    console.error("intlTelInput не загружен. Проверьте подключение библиотеки!");
+    return;
+  }
+  const phoneInput = document.querySelector('.application__phone');
+
+  if (phoneInput) {
+    const phoneMasks = intlTelInput(phoneInput, {
+      utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/js/utils.js",
+      initialCountry: 'auto',
+      geoIpLookup: function (callback) {
+        fetch('https://ipapi.co/json/')
+          .then(response => response.json())
+          .then(data => {
+            const countryCode = data.country_code;
+            callback(countryCode);
+          })
+          .catch(error => {
+            callback("us");
+            console.error(error);
+          });
+      },
+      nationalMode: true,
+      separateDialCode: true,
+    });
+
+    phoneInput.addEventListener('input', () => phoneValidation());
+
+    function phoneValidation() {
+      const isValid = phoneMasks.isValidNumber();
+      if (isValid) {
+        phoneInput.classList.add('valid');
+        phoneInput.classList.remove('is-invalid');
+      } else {
+        phoneInput.classList.remove('valid');
+        phoneInput.classList.add('is-invalid');
+      }
+      return isValid;
+    }
+  }
 });
-
-
-phoneInput.addEventListener('input', () => phoneValidation());
 
 function phoneValidation() {
   const isValid = phoneMasks.isValidNumber();
@@ -224,7 +241,7 @@ const applicationForm = document.querySelector('.application__form');
 applicationForm.addEventListener('submit', (e) => {
   e.preventDefault();
   if (applicationForm.checkValidity()) {
-    if(!phoneValidation()) {
+    if (!phoneValidation()) {
       phoneInput.classList.add('has-error');
     } else {
       document.querySelector('.application__switch-modal').click();
